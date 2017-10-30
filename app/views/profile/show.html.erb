@@ -1,0 +1,28 @@
+<div class='row'>	
+	<div class='container'>	
+	  <%= label_tag :email %><br />
+	  <%= current_user.email %>
+
+		</br>
+		<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+
+    </br></br>    
+
+	  <table>
+		  <thead>
+		    <tr>		      
+		      <th> Submission </th>
+		      <th> Submission date</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <% [].each do |submission| %>
+		      <tr>
+		        <td><%= submission %></td>		        
+		      </tr>
+		    <% end %>
+		  </tbody>
+	  </table>  
+	</div>
+</div>
+
